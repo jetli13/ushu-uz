@@ -1,0 +1,21 @@
+###############################################
+## DO NOT REMOVE OR EDIT LINES BELOW     
+# ***    automatically generated config     ***
+php_value allow_url_fopen 0
+php_value register_globals 0
+php_value error_reporting 6143
+php_value display_errors 1
+AddType application/x-httpd-php5 .php
+# *** end of automatically generated config ***
+###############################################
+AddDefaultCharset utf-8
+
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_URI} !\.(js|ico|gif|jpg|png|css|pdf|doc)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward it to index.php
+RewriteRule . index.php
