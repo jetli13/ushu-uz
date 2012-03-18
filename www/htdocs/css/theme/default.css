@@ -486,4 +486,8 @@ a:hover {
 	cursor: pointer;
 }
 
+ul.yiiPager .selected a:link, ul.yiiPager .selected a:visited, ul.yiiPager .selected a {
+	color: #000000;
+	background-color: #ffffff;
+}
 /**comment test**/
