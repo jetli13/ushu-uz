@@ -38,7 +38,7 @@ $this->widget('zii.widgets.CListView', array(
 		'nextPageLabel' => 'Вперед  >>', // todo localize
 		'prevPageLabel' => '<<  Назад',
 		'firstPageLabel' => 'В начало',
-		'cssFile'=>Yii::app()->request->baseUrl.'/css/theme/pager.css'	
+		//'cssFile'=>Yii::app()->request->baseUrl.'/css/theme/pager.css'	
 	)	
 	
 )); 
