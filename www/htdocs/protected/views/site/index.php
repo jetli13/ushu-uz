@@ -57,12 +57,12 @@
 
 <div class="rightSide" style="width:auto;">
 	<div class="post">
-		<h1 class="title">Ассоциация ушу республики Узбекистан</h1>
+		<!--<h1 class="title" style="text-align: center;">Традиционное ушу</h1>-->
 		<div class="entry">
-			<div style="padding-bottom: 20px;">
-				<img src="/images/site/main.jpg" style="margin: 10px 15px 10px 0;"></img>
+			<div style="padding-bottom: 20px; text-align: right;">
+				<img src="/images/site/main.jpg" style="margin: 10px 0 10px 15px; float: right; width: 333px;"></img>
 				
-					<blockquote style="margin:10px 10px 0 0; ">
+					<blockquote style="margin:10px 10px 0 0;padding-top: 4px;">
 						<i>
 							В боевых искусствах  существуют  три  основных  аспекта. <br />
 							<span style="text-decoration: underline;">Во-первых,  умение  видеть  и  познавать  самого  себя.</span> <br />

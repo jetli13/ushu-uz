@@ -486,6 +486,14 @@ a:hover {
 	cursor: pointer;
 }
 
+ul.yiiPager a:link, ul.yiiPager a:visited {
+	border: 1px solid #DDDDDD;
+	color: #DDDDDD;
+	font-weight: bold;
+	padding: 1px 12px;
+	text-decoration: none;
+}
+
 ul.yiiPager .selected a:link, ul.yiiPager .selected a:visited, ul.yiiPager .selected a {
 	color: #000000;
 	background-color: #ffffff;
