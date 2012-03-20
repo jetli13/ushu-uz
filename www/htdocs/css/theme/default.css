@@ -236,7 +236,7 @@ a:hover {
 
 #content .photoItemWrapper {
 	margin:25px 15px;
-	width: 200px;
+	min-width: 200px; 
 	text-align: center;
 	float:left;
 }
