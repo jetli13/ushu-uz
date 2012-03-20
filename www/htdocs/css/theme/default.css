@@ -240,7 +240,7 @@ a:hover {
 	text-align: center;
 	float:left;
 }
-#content .photoItem img{
+#content .photoItem img, #content .photoAlbumItem .albumCover{
 	box-shadow:0 0 7px 0 #BCB1B1;
 	-webkit-box-shadow:0 0 7px 0 #BCB1B1;
 	-moz-box-shadow:0 0 7px 0 #BCB1B1;
@@ -249,6 +249,7 @@ a:hover {
 
 #content .photoAlbumItem {
 	list-style: none;
+	padding: 10px;
 }
 #content .photoAlbumItem a{
 	color: #878787;
@@ -258,6 +259,18 @@ a:hover {
 
 #content .photoAlbumItem a:hover {
 	text-decoration: underline;
+}
+#content .photoAlbumItem .albumCover {
+    background-color: #CCCCCC;
+    float: left;
+    margin: 5px 15px 5px 0;
+    max-width: 100px;
+    padding: 2px;
+		border: 1px solid #FFFFFF;
+    box-shadow: 2px 2px 0 0 #BCB1B1;
+}
+#content .photoAlbumItem .albumTitle {
+	margin: 0;
 }
 
 #content .items {
