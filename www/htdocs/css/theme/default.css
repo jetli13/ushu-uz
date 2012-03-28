@@ -500,3 +500,37 @@ a:hover {
 }
 
 /**comment test**/
+
+/** ie sucks**/
+.ie-is-old {
+	background-color: #ea8243;
+	padding: 5px 5px 7px;
+	font-family: verdana;
+	font-size: 12px;
+	min-width: 1024px;
+	display: none;
+}
+
+.ie-is-old .message {
+	color: #000000;
+	float: left;
+	left: 50px;
+	position: relative;
+}
+
+.ie-is-old .message .yandex-update {
+	color:#000000; 
+	text-decoration: underline; 
+	margin-left: 10px;
+}
+
+.ie-is-old .hide-and-remember {
+	color: #000000;
+	float: right;
+	position: relative;
+	right: 20px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/** /ie sucks**/
