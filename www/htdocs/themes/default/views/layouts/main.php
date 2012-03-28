@@ -18,6 +18,17 @@
 <title><? print CHtml::encode($this->pageTitle) ?></title>
 </head>
 <body>
+<div class="ie_is_old ie-is-old">
+	<div class="message">
+		Ваш браузер устарел. Он имеет уязвимости и может не показывать все возможности на этом и других сайтах.
+		<a target="_blank" href="http://browsers.yandex.ru/today/" class="yandex-update">
+			Обновить браузер с 
+			<span style="color:red; font-weight: bold;">Я</span><span>ндекса</span>
+		</a> 
+	</div>
+	<div class="hide_and_remember hide-and-remember">закрыть</div> <!-- todo localize -->
+	<div class="clear"></div>
+</div>
 <div id="wrapper">
 	<!--<div id="menu">
 		<ul>
@@ -162,5 +173,6 @@
 <!-- todo убрать подключение assets -->
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/imperavi/redactor.js" ></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/imperavi/init.js" ></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie_check.js" ></script>
 </body>
 </html>
