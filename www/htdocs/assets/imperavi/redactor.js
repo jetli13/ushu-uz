@@ -539,8 +539,8 @@ var $table, $table_tr, $table_td, $tbody, $thead, $current_tr, $current_td;
 			
 			html = html.replace(/(<\!\-\-([\w\W]*?)\-\->)/ig,"");
 
-			html = this._clean(html);
-
+			//html = this._clean(html);
+			
 			html = html.replace(/<div(.*?)>/gi, "<p$1>"); 			
 			html = html.replace(/<\/div>/, '</p>');
 			
@@ -580,7 +580,7 @@ var $table, $table_tr, $table_td, $tbody, $thead, $current_tr, $current_td;
 			
 			html = html.replace(/<span>([\w\W]*?)<\/span>/gi, '$1');				
 
-			html = this._clean(html);
+			//html = this._clean(html);
 			
 			html = this.formating(html);
 
@@ -1776,7 +1776,7 @@ var $table, $table_tr, $table_td, $tbody, $thead, $current_tr, $current_td;
 		},
 		getCodeEditor: function()
 		{
-			return $(this.doc.body).html();
+			return $(this.doc.body)[0].innerHTML;
 		},		
 		getCodeTextarea: function()
 		{
