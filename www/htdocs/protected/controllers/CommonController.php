@@ -34,10 +34,19 @@ abstract class CommonController extends Controller
 	}
 	
 	protected function registerClientSourses() {
-		$scripts = $this->getScripts();
+		$this->registerCoreScripts();
 		
+		$scripts = $this->getScripts();
 		foreach($scripts as $script) {
 			$this->registerScript($script['name'], $script['position']);
+		}
+	}
+	
+	private function registerCoreScripts() {
+		$clientCorePackage = Yii::app()->params['clientCoreScriptsPackages'];
+		
+		foreach ($clientCorePackage as $packageName) {
+			Yii::app()->getClientScript()->registerPackage($packageName);
 		}
 	}
 	
