@@ -499,7 +499,30 @@ a:hover {
 	cursor: pointer;
 }
 
-/**comment test**/
+/** contacts **/
+.contacts {
+	font-size: 15px;
+	line-height:1.5;
+}
+.contacts .person {
+	display: inline-block;
+	width: 450px;
+}
+.contacts .phone {
+font-size: 16px;
+letter-spacing: 1px;
+}
+.administration {
+	padding-left:0;
+}
+.administration li{
+	list-style: none;
+}
+.address {
+	margin-top:2px;
+}
+
+/** /contacts **/
 
 /** ie sucks**/
 .ie-is-old {
