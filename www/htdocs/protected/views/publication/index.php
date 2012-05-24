@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Статьи',
+	'Стили и оружие ушу',
 );
 
 $this->menu=array(

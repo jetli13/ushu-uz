@@ -68,6 +68,10 @@ class SiteController extends CommonController
 		}
 		$this->render('contact',array('model'=>$model));
 	}
+	
+	public function actionAssociation() {
+		$this->render('association');
+	}
 
 	/**
 	 * Displays the login page
