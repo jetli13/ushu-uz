@@ -294,7 +294,12 @@ table {
 	letter-spacing: -0.5px;
 	margin-bottom: 30px;
 	padding: 0;
+	text-align: center;
 	
+}
+
+.list-view .post .title {
+	text-align: left;
 }
 
 .post .meta {
