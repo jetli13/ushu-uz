@@ -53,6 +53,11 @@ a {
 a:hover {
 }
 
+table {
+	border: 0;
+	width:100%;
+}
+
 #wrapper {
 	width: 1024px;
 	margin: 0 auto;

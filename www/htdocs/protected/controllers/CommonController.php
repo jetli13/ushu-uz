@@ -31,6 +31,7 @@ abstract class CommonController extends Controller
 	
 	public function init() {
 		$this->registerClientSourses();
+		$this->pageTitle = 'Ассоциация традиционного ушу Узбекистана';
 	}
 	
 	protected function registerClientSourses() {

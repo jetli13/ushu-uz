@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Статьи'=>array('index'),
+	'Стили и оружие ушу'=>array('index'),
 	$model->ru_title,
 );
 
