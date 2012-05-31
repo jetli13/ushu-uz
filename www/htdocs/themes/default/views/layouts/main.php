@@ -46,15 +46,16 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Главная', 'url'=>array('/site/index')),
-					array('label'=>'Ассоциация', 'url'=>array('/site/association')),
-					array('label'=>'Стили и оружие ушу', 'url'=>array('/publication')),
-					array('label'=>'Фото', 'url'=>array('/album')),
+				array('label'=>'Ассоциация', 'url'=>array('/site/association')),
+				array('label'=>'статьи', 'url'=>array('/publication/article')),
+				array('label'=>'Стили и оружие ушу', 'url'=>array('/publication')),
+				array('label'=>'Фото', 'url'=>array('/album')),
 				array('label'=>'Видео', 'url'=>array('/video')),
 //				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Контакты', 'url'=>array('/site/contact')), 
 				
 				
-				array('label'=>'статьи', 'url'=>array('/publication/article')),
+
 				
 				//array('label'=>'Войти', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				//array('label'=>'Выйти ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
