@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	$this->typeCaption,
+	'Статьи',
 );
 
 $this->menu=array(
-	array('label'=>'Добавить публикацию', 'url'=>array('create')),
+	array('label'=>'Добавить статью', 'url'=>array('createArticle')), 
 	array('label'=>'Управлять', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Стили и оружие ушу</h1>
+<h1>Статьи</h1>
 
 <?php 
 	$this->widget('zii.widgets.CListView', array(

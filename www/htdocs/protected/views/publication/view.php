@@ -1,6 +1,9 @@
 <?php
+
+$urlOptions = $model->publicationType->id == 2 ? array('article') : array('index'); //@todo магия констант
+
 $this->breadcrumbs=array(
-	'Стили и оружие ушу'=>array('index'),
+	$model->publicationType->caption => $urlOptions,
 	$model->ru_title,
 );
 

@@ -39,12 +39,26 @@ class Publication extends CActiveRecord
 		$text = mb_substr($text, 0, $TEXT_LIMIT) . '...';
 		//$text = CHtml::encode($text);
 		
+		if (!isset($result[0])) {
+			return $text;
+		}
+		
 		$img = $result[0];
 		preg_match($srcPattern, $img, $result);
 		
 		$src = $result[1];
 		
 		return '<img src="/upload/photo/publication/128/thumb_' . $src . '.jpg" class="preview" />' . $text;
+	}
+	
+	public function getTypeById($id) {
+		$command = Yii::app()->db->createCommand();
+		$result = $command->select('caption')
+										  ->from('publication_type')
+										  ->where('publication_type.id' . '=:id', array(':id' => $id))
+											->query()
+											->readAll();
+		return $result[0]['caption'];
 	}
 
 	/**
@@ -81,6 +95,7 @@ class Publication extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'publicationType' => array(self::BELONGS_TO, 'PublicationType', 'type'), 
 		);
 	}
 
@@ -100,6 +115,17 @@ class Publication extends CActiveRecord
 			'creationDate' => 'Creation Date',
 			'image' => 'Фото',
 		);
+	}
+	
+	public function __get($prop) {
+		
+		if ($prop == 'creationDate') {
+			$creationDate = parent::__get($prop);
+			return substr($creationDate, 0, 10);
+		}
+		else {
+			return parent::__get($prop);
+		}
 	}
 
 	/**
@@ -122,6 +148,7 @@ class Publication extends CActiveRecord
 		$criteria->compare('outerLink',$this->outerLink,true);
 		$criteria->compare('creationDate',$this->creationDate,true);
 		$criteria->compare('image',$this->image,true);
+		$criteria->compare('type',$this->type,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

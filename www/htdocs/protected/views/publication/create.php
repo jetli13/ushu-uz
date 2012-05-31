@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array( //todo убрать в контроллер
-	'Стили и оружие ушу'=>array('index'),
+	$typeCaption =>array('index'),
 	'Создать',
 );
 

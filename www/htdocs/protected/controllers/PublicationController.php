@@ -7,6 +7,8 @@ class PublicationController extends CommonController
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	private $ARTICLE_ID = 2;
+	public $typeCaption;
 
 	/**
 	 * @return array action filters
@@ -27,11 +29,11 @@ class PublicationController extends CommonController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'article'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','createArticle'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -75,10 +77,37 @@ class PublicationController extends CommonController
 		
 		$this->includeClientScript();
 		
-
-
 		$this->render('create',array(
 			'model' => $model,
+			'typeId' => 1, //todo магические константы
+			'typeCaption' => 'Стили и оружие ушу',
+			'uploadUrl'	=> '/publication/uploadPhoto.html',//@todo все в константы и конфиги!!!
+			'photosFolder' => '/upload/photo/publication/' ,//@todo все в константы и конфиги!!!	
+		));
+	}
+	
+
+	public function actionCreateArticle()
+	{
+		$model=new Publication;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Publication']))
+		{
+			$model->attributes=$_POST['Publication'];
+			$model->type = 2; // todo магия константы
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+		}
+		
+		$this->includeClientScript();
+		
+		$this->render('create', array(
+			'model' => $model,
+			'typeId' => 2,
+			'typeCaption' => 'Cтатьи',
 			'uploadUrl'	=> '/publication/uploadPhoto.html',//@todo все в константы и конфиги!!!
 			'photosFolder' => '/upload/photo/publication/' ,//@todo все в константы и конфиги!!!	
 		));
@@ -154,15 +183,44 @@ class PublicationController extends CommonController
 	}
 
 	/**
-	 * Lists all models.
+	 * @todo 
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Publication');
+		$dataProvider = new CActiveDataProvider(
+						'Publication', 
+						array (
+								'criteria' => array('condition' => 'type!=' . $this->ARTICLE_ID)
+						)
+		);
+		
+		$this->typeCaption = 'Стили и оружия ушу'; // todo получать из модели
+		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
+	
+	public function actionArticle () {
+		$dataProvider = new CActiveDataProvider(
+						'Publication', 
+						array (
+								'criteria' => array(
+										 'condition' => 'type=' . $this->ARTICLE_ID, 
+										 'order'=>'creationDate DESC',
+										 'limit'=> 3
+								),
+								'pagination' => false
+						)
+		);
+		
+		$this->typeCaption = 'Статьи';
+		
+		$this->render('article',array(
+			'dataProvider'=>$dataProvider,
+		));	
+	}
+	
 
 	/**
 	 * Manages all models.
