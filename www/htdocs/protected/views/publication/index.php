@@ -16,5 +16,12 @@ $this->menu=array(
 		'dataProvider'=>$dataProvider,
 		'itemView'=>'_view',
 		'summaryText' => '',
+		'pager' => array(
+			'header' => '',
+			'nextPageLabel' => 'Вперед  >>', // todo localize
+			'prevPageLabel' => '<<  Назад',
+			'firstPageLabel' => 'В начало',
+			//'cssFile'=>Yii::app()->request->baseUrl.'/css/theme/pager.css'	
+		)	
 	)); 
 ?>
