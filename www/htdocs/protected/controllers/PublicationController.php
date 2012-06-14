@@ -8,6 +8,8 @@ class PublicationController extends CommonController
 	 */
 	public $layout='//layouts/column2';
 	private $ARTICLE_ID = 2;
+	private $STYLE_AND_WEAPON_ID = 1;
+	private $NEWS_ID = 3;
 	public $typeCaption;
 
 	/**
@@ -29,11 +31,11 @@ class PublicationController extends CommonController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'article'),
+				'actions'=>array('index','view', 'article', 'news'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','createArticle'),
+				'actions'=>array('create','update','createArticle', 'createNews'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -108,6 +110,33 @@ class PublicationController extends CommonController
 			'model' => $model,
 			'typeId' => 2,
 			'typeCaption' => 'Cтатьи',
+			'uploadUrl'	=> '/publication/uploadPhoto.html',//@todo все в константы и конфиги!!!
+			'photosFolder' => '/upload/photo/publication/' ,//@todo все в константы и конфиги!!!	
+		));
+	}
+	
+	
+	public function actionCreateNews()
+	{
+		$model=new Publication;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Publication']))
+		{
+			$model->attributes=$_POST['Publication'];
+			$model->type = 3; // todo магия константы
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+		}
+		
+		$this->includeClientScript();
+		
+		$this->render('create', array(
+			'model' => $model,
+			'typeId' => 2,
+			'typeCaption' => 'Новости',
 			'uploadUrl'	=> '/publication/uploadPhoto.html',//@todo все в константы и конфиги!!!
 			'photosFolder' => '/upload/photo/publication/' ,//@todo все в константы и конфиги!!!	
 		));
@@ -190,7 +219,7 @@ class PublicationController extends CommonController
 		$dataProvider = new CActiveDataProvider(
 						'Publication', 
 						array (
-								'criteria' => array('condition' => 'type!=' . $this->ARTICLE_ID)
+								'criteria' => array('condition' => 'type=' . $this->STYLE_AND_WEAPON_ID)
 						)
 		);
 		
@@ -219,6 +248,25 @@ class PublicationController extends CommonController
 		$this->render('article',array(
 			'dataProvider'=>$dataProvider,
 		));	
+	}
+	
+	public function actionNews() {
+				$dataProvider = new CActiveDataProvider(
+						'Publication', 
+						array (
+								'criteria' => array(
+										 'condition' => 'type=' . $this->NEWS_ID, 
+										 'order'=>'creationDate DESC'
+								),
+								'pagination' => false
+						)
+		);
+		
+		$this->typeCaption = 'Новости';
+		
+		$this->render('news',array(
+			'dataProvider'=>$dataProvider,
+		));
 	}
 	
 
@@ -285,6 +333,23 @@ class PublicationController extends CommonController
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function actionDrawLastNewsBlock() {		
+		$dataProvider = new CActiveDataProvider(
+				'Publication', 
+				array (
+						'criteria' => array(
+								'condition' => 'type=' . $this->NEWS_ID,
+								'order' => 'creationDate DESC',
+								'limit' => 3
+					)
+				)
+		);
+		
+		print $this->renderPartial('news_block', array(
+			'dataProvider' => $dataProvider,
+		));
 	}
 	
 }

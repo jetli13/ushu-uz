@@ -49,6 +49,7 @@
 				array('label'=>'Ассоциация', 'url'=>array('/site/association')),
 				array('label'=>'статьи', 'url'=>array('/publication/article')),
 				array('label'=>'Стили и оружие ушу', 'url'=>array('/publication')),
+				array('label'=>'Новости', 'url'=>array('/publication/news')),
 				array('label'=>'Фото', 'url'=>array('/album')),
 				array('label'=>'Видео', 'url'=>array('/video')),
 //				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),

@@ -1,5 +1,5 @@
 <?php
-
+Yii::import('application.controllers.PublicationController');
 class SiteController extends CommonController
 {
 	
@@ -106,5 +106,10 @@ class SiteController extends CommonController
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+	
+	public function drawLastNewsBlock() {
+		$publicationController = new PublicationController('publication');
+		$publicationController->actionDrawLastNewsBlock();
 	}
 }

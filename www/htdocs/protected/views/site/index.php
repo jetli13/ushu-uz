@@ -1,9 +1,13 @@
 <?php $this->pageTitle=Yii::app()->name; ?>
 
-<div class="leftSide" style="display: none;">
+<?	
+	$this->drawLastNewsBlock();
+?>
+<!--<div class="leftSide">
 	<div id="sidebar">
+	 		
 		<ul>
-			<!--<li>
+			<li>
 				<div id="search" >
 				<form method="get" action="#">
 					<div>
@@ -13,7 +17,7 @@
 				</form>
 				</div>
 				<div style="clear: both;">&nbsp;</div>
-			</li>-->
+			</li>
 			<li>
 				<h2>Aliquam tempus</h2>
 				<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
@@ -52,10 +56,10 @@
 				</ul>
 			</li>
 		</ul>
-	</div> <!-- end #sidebar -->
-</div>
+	</div>  end #sidebar 
+</div>-->
 
-<div class="rightSide" style="width:auto;">
+<div class="rightSide">
 	<div class="post">
 		<!--<h1 class="title" style="text-align: center;">Традиционное ушу</h1>-->
 		<div class="entry">

@@ -59,7 +59,7 @@ table {
 }
 
 #wrapper {
-	width: 1024px;
+	width: 1280px;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -69,13 +69,14 @@ table {
 }
 
 .leftSide{
-	float: left;
-	width: 20%;
+    float: left;
+    padding-right: 10px;
+    width: 23%;
 }
 .rightSide {
 	float: left;
 	padding-left: 20px;
-	width: 77%;
+	width: 73%;
 }
 
 
@@ -86,7 +87,7 @@ table {
 	height: 370px;
 	margin: 30px auto 0px auto;
 	padding: 0px 0px 0px 0px;
-	background: url(/images/theme/default/img01.jpg) no-repeat 40px 0;
+	background: url(/images/theme/default/img01.jpg) no-repeat 165px 0;
 }
 
 /* Logo */
@@ -235,7 +236,7 @@ table {
 /* Content */
 
 #content {
-	width: 1000px;
+	width: 1250px;
 	padding: 30px 0px 0px 0px;
 }
 
@@ -363,7 +364,7 @@ table {
 
 #sidebar ul {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 20px;
 	list-style: none;
 }
 
@@ -398,12 +399,36 @@ table {
 	font-style: italic;
 }
 
+#sidebar ul.list-view{
+	padding-left: 10px;
+}
+
+#sidebar ul img{
+	float: left;
+	width: 100px;
+	margin-right: 10px;
+	border: 3px solid #1A1A19;
+	box-shadow: 0 0 2px 0 #BCB1B1;
+}
+#sidebar ul img:hover {
+		box-shadow: 0 0 2px 0 #fff;
+}
+#sidebar .items{
+	margin: 0 0 20px;
+}
+
+#sidebar li.items p{
+	padding: 0;
+}
+#sidebar h1{
+	margin-bottom: 20px;
+	padding: 0;
+}
 #sidebar h2 {
-	height: 38px;
-	padding-left: 30px;
+	height: 30px;
 	letter-spacing: -.5px;
 	font-size: 1.8em;
-	color: #FFFFFF;
+	color: #878787;
 }
 
 #sidebar p {
@@ -418,7 +443,7 @@ table {
 }
 
 #sidebar a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 	color: #FFFFFF;
 }
 

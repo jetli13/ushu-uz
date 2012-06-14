@@ -1,6 +1,14 @@
 <?php
 
-$urlOptions = $model->publicationType->id == 2 ? array('article') : array('index'); //@todo магия констант
+//$urlOptions = $model->publicationType->id == 2 ? array('article') : array('index'); //@todo магия констант
+
+switch ($model->publicationType->id){
+	case 1: $urlOptions = array('index');
+		break;
+	case 2: $urlOptions = array('article');
+		break;
+	case 3: $urlOptions = array('news');
+}
 
 $this->breadcrumbs=array(
 	$model->publicationType->caption => $urlOptions,
