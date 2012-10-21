@@ -87,16 +87,13 @@ If you have business inquiries or other questions, please fill out the following
 		<ul class="administration">
 			<li>
 				<span class="person">Борзов Владимир Георгиевич - предсетатель АТУУ.</span>
-				Тел: <span class="phone">+99897 157-73-93</span></li>
+				Тел: <span class="phone">+99890 805-73-93</span></li>
 			<li>
 				<span class="person">Минаков Артем Сергеевич - заместитель председателя АТУУ.</span>
-				Тел: <span class="phone">+99897 800-80-17</span></li>
+				Тел: <span class="phone">+99891 164-66-78</span></li>
 			<li>
 				<span class="person">Султанов Азиз Бахтиярович - старший тренер АТУУ.</span>
 				Тел: <span class="phone">+99897 331-98-84</span></li>
-			<li>
-				<span class="person">Кармазина Ольга Витальевна - ответственный секретарь АТУУ.</span>
-				Тел: <span class="phone">+99897 372 09 14</span></li>
 		</ul>
 		<h3>Наш адрес</h3>
 		<p class="address">
