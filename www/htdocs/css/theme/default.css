@@ -425,7 +425,7 @@ table {
 	padding: 0;
 }
 #sidebar h2 {
-	height: 30px;
+	padding-bottom: 8px;
 	letter-spacing: -.5px;
 	font-size: 1.8em;
 	color: #878787;
