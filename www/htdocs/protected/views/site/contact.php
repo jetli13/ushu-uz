@@ -93,8 +93,11 @@ If you have business inquiries or other questions, please fill out the following
 				Тел: <span class="phone">+99891 164-66-78</span></li>
 			<li>
 				<span class="person">Султанов Азиз Бахтиярович - старший тренер АТУУ.</span>
-				Тел: <span class="phone">+99897 331-98-84</span></li>
-		</ul>
+				Тел: <span class="phone">+99890 935-98-44</span></li>
+			<li>
+				<span class="person">Сулейманова Анна Александровна - ответственный секретарь АТУУ.</span>
+				Тел: <span class="phone">+99890 900-17-19</span></li>
+		</ul>		
 		<h3>Наш адрес</h3>
 		<p class="address">
 			г.Ташкент 
