@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.fancybox-thumbs.css" />
 	
 	
-	<!-- todo убрать подключение assets!!! -->
+	<!-- todo убрать подключение assets deploy test-->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/imperavi/css/redactor.css" />
 
 

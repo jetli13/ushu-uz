@@ -128,11 +128,7 @@ class VideoController extends CommonController
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Video', array(
-            'pagination'=>array(
-                'pageSize'=>2,
-            )
-        ));
+		$dataProvider=new CActiveDataProvider('Video');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
