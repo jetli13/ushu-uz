@@ -165,7 +165,7 @@
 				</li>
 			</ul>
 		</div>-->
-		<!-- end #sidebar -->
+		<!-- end #side bar -->
 <!--		<div style="clear: both;">&nbsp;</div>-->
 	</div>
 	</div>

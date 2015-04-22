@@ -15,7 +15,7 @@ $this->menu=array(
 
 <h1><?=$model->name?></h1>
 
-<?php 
+<?php
 $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

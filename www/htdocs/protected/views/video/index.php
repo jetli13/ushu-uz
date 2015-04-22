@@ -17,5 +17,12 @@ $this->menu=array(
 	$this->widget('zii.widgets.CListView', array(
 		'dataProvider'=>$dataProvider,
 		'itemView'=>'_view',
-	)); 
+        'summaryText' => '',
+        'pager' => array(
+            'header' => '',
+            'nextPageLabel' => 'Вперед  >>', // todo localize
+            'prevPageLabel' => '<<  Назад',
+            'firstPageLabel' => 'В начало',
+        )
+    ));
 ?>
