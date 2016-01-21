@@ -173,11 +173,11 @@
 	</div>
 	</div>
 	<!-- end #page -->
-</div>
 	<div id="footer">
 		<p>© 2012 <a href="/">Ассоциация Традиционного ушу республики Узбекистан</a></p>
 	</div>
 	<!-- end #footer -->
+</div>
 <!-- todo убрать подключение assets -->
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/imperavi/redactor.js" ></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/imperavi/init.js" ></script>
